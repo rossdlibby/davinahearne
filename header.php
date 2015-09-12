@@ -85,7 +85,7 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
 	<!-- Oswald font -->
-	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
 	<!-- concatenate and minify for production -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/reset.css" />
@@ -125,7 +125,7 @@
 		}
 	?>
 
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="profile" href="//gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<!-- Futura font -->
