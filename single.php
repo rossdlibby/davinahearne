@@ -51,7 +51,7 @@
 				<br>
 
 				<div class="row">
-					<a href="#" id="leaveComment">Leave a comment :)</a>
+					<a href="#" class="pink" id="leaveComment">Leave a comment :)</a>
 
 					<br>
 					

@@ -227,9 +227,13 @@ article p {
 	line-height: 1.8em;
 }
 
+/** home ad **/
+.home-ad {
+	padding-top: 51px;
+}
+
 /** home buttons **/
 .home-buttons {
-	padding-top: 51px;
 }
 
 .home-buttons img {
@@ -278,4 +282,115 @@ article p {
 
 a.individual-post-link {
 	color: #2e2e2e;
+}
+
+/** footer styling **/
+footer {
+	width: 100%;
+	float: left;
+	display: block;
+	padding: 15px 0;
+	text-align: center;
+	background: #000;
+	color: #fff;
+}
+
+/** colors **/
+.bg-pink {
+	background-color: #ff0198;
+}
+
+.fg-white {
+	color: #fff;
+}
+
+.capitalized {
+	text-transform: uppercase;
+}
+
+.small {
+	font-size: .9em;
+}
+
+/** overrides **/
+.not-rounded {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.no-border {
+	border: none;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #eee;
+}
+
+/** hide the home ad **/
+#home_ad {
+	display: none;
+}
+
+/** sidebar **/
+#sidebar {
+	float: left;
+}
+
+.praise-img {
+	display: block;
+	width: 160px;
+	height: 160px;
+	border-radius: 180px;
+	-webkit-border-radius: 180px;
+	-moz-border-radius: 180px;
+	-o-border-radius: 180px;
+	background-repeat: no-repeat;
+	background-image: url('images/bb-melanie-webster-5.jpg');
+	background-position: -278px -13px;
+	float: left;
+	margin-right: 10px;
+}
+
+.widget {
+	padding-top: 25px;
+	border-bottom: 1px solid #eee;
+}
+
+.widget ul li {
+	margin: 12px 0;
+}
+
+.widget ul li a {
+	color: #000;
+	background: #eee;
+	padding: 4px 40px 4px 10px;
+	font-family: 'brandon-grotesque';
+	transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+}
+
+.widget ul li a:hover {
+	padding-right: 90px;
+}
+
+/** post date **/
+.post-date a {
+	color: #ff0198;
+}
+
+/** highlight **/
+.highlight {
+	padding: 0 5px;
+	background: #eee;
+}
+
+/** pink **/
+.pink {
+	color: #ff0198;
 }

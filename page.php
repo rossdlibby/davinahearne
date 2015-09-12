@@ -7,29 +7,72 @@
  get_header(); ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-		<article class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php the_title(); ?></h2>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-2">
+				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-			<?php posted_on(); ?>
+					<br>
 
-			<div class="entry">
+					<div class="row">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+					</div>
 
-				<?php the_content(); ?>
+					<br>
 
-				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
+					<div class="row">
+
+						<?php if (has_post_thumbnail()) { ?>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+						<div class="well">
+							<img src="<?php echo $image[0] ?>" />
+						</div>
+						<?php } ?>
+					</div>
+
+					<div class="row">
+						<div class="entry-content">
+							
+							<?php the_content(); ?>
+
+							<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
+							
+							<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?>
+
+						</div>
+					</div>
+					
+					<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
+					
+				</article>
+
+				<br>
+				<br>
+
+				<div class="row">
+					<a href="#" class="pink" id="leaveComment">Leave a comment :)</a>
+
+					<br>
+					
+					<div id="commentForm">
+						<?php comments_template(); ?>
+					</div>
+				</div>
 
 			</div>
 
-			<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-1">
+						<?php get_sidebar(); ?>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		</article>
-		
-		<?php comments_template(); ?>
+	<?php endwhile; endif; ?>
 
-		<?php endwhile; endif; ?>
-
-<?php get_sidebar(); ?>
+<?php post_navigation(); ?>
 
 <?php get_footer(); ?>

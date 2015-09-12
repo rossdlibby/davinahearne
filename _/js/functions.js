@@ -22,7 +22,23 @@
 		// Display comment form upon user request
 		$('#leaveComment').click(function(e){
 			e.preventDefault();
-			$('#commentForm').slideDown();
+			
+			// Change the link's text depending on comment visibility
+			if($('#commentForm').is(':visible')) {
+				$(this).text('Leave a comment :)');
+			} else {
+				$(this).text('Hide comments');
+			}
+			$('#commentForm').slideToggle();
+		});
+
+		// Display the homepage ad after a 5 second delay
+		$('#home_ad').delay(5000).slideToggle();
+
+		// Hide the homepage ad
+		$('#hide_home_ad').click(function(e) {
+			e.preventDefault();
+			$('#home_ad').slideToggle();
 		});
 
 	});
