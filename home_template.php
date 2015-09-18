@@ -5,6 +5,11 @@
 get_header(); ?>
 
 <!-- Home page ad -->
+<div class="row">
+	<div class="header-container">
+		<img src="<?php bloginfo('template_directory') ?>/images/davina-header-img.jpg" alt="Be Happy, Be Wild, Be Free | Davina Hearne" />
+	</div>
+</div>
 <div class="home-ad row well not-rounded" id="home_ad">
 	<br>
 	<div class="col-md-4 text-center capitalized small">
