@@ -44,6 +44,9 @@
 					</div>
 					
 					<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
+
+				<div class="post-divider">
+				</div>
 					
 				</article>
 

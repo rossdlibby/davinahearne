@@ -32,6 +32,11 @@
 			$('#commentForm').slideToggle();
 		});
 
+		// Display follow-bar upon user scroll
+		$(document).scroll(function(){
+			$('#follow-bar').show();
+		});
+
 		// Display the homepage ad after a 5 second delay
 		$('#home_ad').delay(5000).slideToggle();
 

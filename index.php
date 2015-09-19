@@ -8,57 +8,65 @@
 
 
 	<div class="row">
-		<div class="col-md-5 col-md-offset-2 col-sm-12">
+		<div class="col-md-8 col-md-offset-2 col-sm-12">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-							<br>
-
 							<div class="row">
-								<h1 class="entry-title posts-page"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+								<div class="col-md-12">
+									<h1 class="entry-title posts-page"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+								</div>
 							</div>
-
-							<br>
-
-							<br>
-
-							<div class="row text-right post-date">
-								<h5><span class="highlight"><?php posted_on(); ?></span></h5>
-							</div>
-
-							<br>
 
 							<br>
 
 							<div class="row">
 
-								<a href="<?php the_permalink() ?>" class="individual-post-link">
-									<span class="individual-post">
+								<div class="col-md-6">
 
-										<?php if (has_post_thumbnail()) { ?>
-										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+									<a href="<?php the_permalink() ?>" class="individual-post-link">
+										<span class="individual-post">
 
-										<div class="partial-img">
-											<img src="<?php echo $image[0] ?>" />
-										</div>
-										<?php } ?>
+											<?php if (has_post_thumbnail()) { ?>
+											<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-										<div class="posts-excerpt">
-											<?php echo wp_trim_words(get_the_content(), 50); ?>
-										</div>
-									</span>
-								</a>
+											<div class="partial-img">
+												<img src="<?php echo $image[0] ?>" />
+											</div>
+											<?php } ?>
+										</span>
+									</a>
+								</div>
+
+								<div class="col-md-6">
+									<div class="posts-excerpt">
+										<?php echo wp_trim_words(get_the_content(), 50); ?>
+									</div>
+
+									<br>
+
+								</div>
+
+								<div class="text-right post-date">
+									<h5><span class="highlight"><?php posted_on(); ?></span></h5>
+								</div>
 
 							</div>
 
 						</article>
 
-			<?php endwhile; ?>
+						<br>
 
-		</div>
-		<div class="col-md-3 col-md-offset-1">
-			<?php get_sidebar(); ?>
+						<br>
+
+						<br>
+
+						<br>
+
+						<div class="post-divider"></div>
+
+			<?php endwhile; ?>
 		</div>
 	</div>
 

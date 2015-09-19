@@ -9,6 +9,15 @@
 	<!-- End content container -->
 	</div>
 
+	<!-- Follow bar -->
+	<div class="follow-bar" id="follow-bar">
+		Share this page:
+		<a href="#"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
+		<a href="#"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a>
+		<a href="#"><i class="fa fa-google-plus"></i>&nbsp;&nbsp;Google+</a>
+		<a href="#"><i class="fa fa-pinterest"></i>&nbsp;&nbsp;Pinterest</a>
+	</div>
+
 	<footer id="footer" class="source-org vcard copyright" role="contentinfo">
 		<small>&copy;&nbsp;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
 	</footer>

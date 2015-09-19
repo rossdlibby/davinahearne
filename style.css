@@ -176,7 +176,6 @@ article h1 a {
 
 article h1.posts-page {
 	font-size: .9em;
-	border-bottom: 1px solid #2e2e2e;
 }
 
 article h1.posts-page a:hover {
@@ -261,7 +260,8 @@ article p {
 /** rollover effect for individual posts **/
 .individual-post {
 	display: block;
-	background: #fff;
+	background: #eee;
+	border: 1px solid #eee;
 
 	cursor: pointer;
 
@@ -380,6 +380,9 @@ footer {
 }
 
 /** post date **/
+.post-date {
+	margin: 0 15px;
+}
 .post-date a {
 	color: #ff0198;
 }
@@ -403,4 +406,56 @@ footer {
 	background-color: #3a393e;
 	text-align: center;
 	display: block;
+}
+
+/** follow bar **/
+.follow-bar {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #000;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	font-size: .75em;
+	color: #fff;
+	text-align: center;
+	padding: 12px 0;
+	display: none;
+}
+
+.follow-bar a {
+	color: #fff;
+	margin: 0 5px;
+	padding: 4px 10px;
+	border: 1px solid rgb(255, 255, 255);
+	border: 1px solid rgba(255, 255, 255, .4);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+}
+
+.follow-bar a:hover {
+	background: #fff;
+	color: #000;
+}
+
+/** post divider **/
+.post-divider {
+	border-bottom: 1px solid #2e2e2e;
+}
+
+/** related posts **/
+.yuzo_wraps a .yuzo__text--title {
+	color: #000;
+	font-family: 'brandon-grotesque';
+}
+
+.yuzo__title h3 {
+	display: block;
+	width: auto;
+	border: 2px solid #666;
+	text-align: center;
 }

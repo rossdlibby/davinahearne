@@ -9,7 +9,7 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="row">
-			<div class="col-md-6 col-md-offset-2">
+			<div class="col-md-8 col-md-offset-2">
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 					<br>
@@ -60,14 +60,6 @@
 					</div>
 				</div>
 
-			</div>
-
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-1">
-						<?php get_sidebar(); ?>
-					</div>
-				</div>
 			</div>
 		</div>
 
