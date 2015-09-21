@@ -6,6 +6,42 @@
  */
  get_header(); ?>
 
+	 <!-- Header image -->
+	<div class="row">
+		<div class="header-container">
+			<?php if (has_post_thumbnail()) { ?>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+				<img src="<?php echo $image[0] ?>" />
+			<?php } ?>
+		</div>
+	</div>
+	<!-- Home page ad -->
+	<div class="home-ad row well not-rounded" id="home_ad">
+		<br>
+		<div class="col-md-4 text-center capitalized small">
+			<div class="col-md-10 col-md-offset-2">
+				<p><strong>Get weekly goodies, inspiration + updates straight to your inbox</strong></p>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<form class="form-horizontal">
+				<div class="col-md-4">
+					<input type="text" placeholder="Enter your name" class="form-control not-rounded no-border border-bottom" />
+				</div>
+				<div class="col-md-4">
+					<input type="email" placeholder="Enter your email" class="form-control not-rounded no-border border-bottom" />
+				</div>
+				<div class="col-md-2">
+					<input type="submit" value="Give it to me" class="btn btn-primary" />
+				</div>
+				<div class="col-md-1 col-md-offset-1">
+					<a href="#" class="btn btn-default no-border" id="hide_home_ad">&#x2716;</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="row">
@@ -19,17 +55,6 @@
 					</div>
 
 					<br>
-
-					<div class="row">
-
-						<?php if (has_post_thumbnail()) { ?>
-						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-
-						<div class="well">
-							<img src="<?php echo $image[0] ?>" />
-						</div>
-						<?php } ?>
-					</div>
 
 					<div class="row">
 						<div class="entry-content">

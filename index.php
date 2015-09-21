@@ -44,12 +44,10 @@
 										<?php echo wp_trim_words(get_the_content(), 50); ?>
 									</div>
 
-									<br>
-
 								</div>
 
 								<div class="text-right post-date">
-									<h5><span class="highlight"><?php posted_on(); ?></span></h5>
+									<h5><a href="<?php the_permalink() ?>">Read more</a></h5>
 								</div>
 
 							</div>

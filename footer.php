@@ -29,7 +29,6 @@
 
 	<!-- Scripts -->
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/bootstrap/js/custom.js"></script>
 
 	<!-- this is where we put our custom functions -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>

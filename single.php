@@ -45,6 +45,15 @@
 					
 					<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
 
+					<div class="row next-prev">
+						<div class="col-md-2 lt">
+							<?php previous_post('%', '<i class="fa fa-angle-left"></i> <span>Previous</span>', 'no'); ?>
+						</div>
+						<div class="col-md-2 col-md-offset-8 rt">
+							<?php next_post('%', '<span>Next</span> <i class="fa fa-angle-right"></i>', 'no'); ?>
+						</div>
+					</div>
+
 				<div class="post-divider">
 				</div>
 					

@@ -138,44 +138,92 @@
 
 <body <?php body_class(); ?>>
 
+	<!-- Facebook SDK -->
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId		: '907243382695391',
+			xfbml		: true,
+			version		: 'v2.4'
+		});
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
 	<!-- Nav -->
-	<nav class="navbar navbar-inverse navbar-fixed-top text-right" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top text-right" id="navigation" role="navigation">
 		<div class="container-fluid">
+			<!-- Search box -->
+			<div class="row" id="topSearch">
+				<div class="col-md-8 col-md-offset-2">
+					<form role="search">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="search-form">
+									<div class="row">
+										<div class="col-md-1 text-right no-padding-right">
+											<i class="fa fa-search"></i>
+										</div>
+										<div class="col-md-9 text-left no-padding-left">
+											<input id="searchInput" class="search-query sb-search-input" placeholder="What are you searching for?" type="search" value="" name="search" id="search">
+										</div>
+										<div class="col-md-2">
+											<button type="submit" class="sb-button-go">
+												<span>SEARCH</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 
-			<div class="navbar-header">
-
-				<!-- Responsive button -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-
-				<!-- Logo -->
-				<a href="<?php home_url(); ?>" class="navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/images/davinahearne-logo.png" alt="Davina Hearne" width="150" /></a>
+					<br>
+				</div>
 			</div>
 
-			<!-- Menu items -->
-			<div class="collapse navbar-collapse" id="navigation">
-				<?php wp_nav_menu( array('theme_location' => 'primary', 'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav tk-futura-pt main-menu">%3$s</ul>') ); ?>
+			<div class="col-md-8 col-md-offset-2">
 
-				<!-- Highlighted item -->
-				<p class="navbar-text promo-text tk-futura-pt">
-					GET FREE STUFF
-				</p>
+				<div class="navbar-header">
 
-				<!-- Search box -->
-				<div class="navbar-right sb-search">
-					<form class="navbar-form sb-search" role="search">
-						<div class="search-only">
-						<input id="searchInput" class="search-query sb-search-input" placeholder="Search..." type="search" value="" name="search" id="search">
-						<button type="submit" id="doSearch" class="sb-button"><span><i class="fa fa-search"></i></span></button>
-					</form>
+					<!-- Responsive button -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<!-- Logo -->
+					<a href="<?php home_url(); ?>" class="navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/images/davinahearne-logo.png" alt="Davina Hearne" width="150" /></a>
 				</div>
+
+				<!-- Menu items -->
+				<div class="collapse navbar-collapse" id="navigation">
+					<?php wp_nav_menu( array('theme_location' => 'primary', 'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav tk-futura-pt main-menu">%3$s</ul>') ); ?>
+
+					<!-- Highlighted item -->
+					<div class="navbar-text no-margin navbar-right">
+						<p class="promo-text tk-futura-pt">GET FREE STUFF</p>
+
+						<div class="sb-search">
+							<button id="doSearch" class="sb-button">
+								<span><i class="fa fa-search"></i></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</nav>
 
 	<!-- Content container -->
-	<div class="container-fluid">
+	<div class="container-fluid" id="mainContent">

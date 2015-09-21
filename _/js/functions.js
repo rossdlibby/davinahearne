@@ -19,6 +19,35 @@
 		// Hide comment form on page load
 		$('#commentForm').hide();
 
+		// Display search form upon search button click
+		$('#doSearch').click(function(){
+
+			// Toggle the search box
+			$('#topSearch').slideToggle();
+
+			// If the search is not expanded, expand it
+			// Also change the search icon to an 'x'
+			if($(this).html().trim() != '<span><i class="fa fa-times"></i></span>') {
+
+				// Expand the search box
+				$('#mainContent').css({'margin-top': '60px'});
+
+				// Change the icon to an 'x'
+				$(this).html('<span><i class="fa fa-times"></span>');
+
+			} else {
+
+				// Close the search box
+				$('#mainContent').css({'margin-top': '0'});
+
+				// Change the icon back to the search glyph
+				$(this).html('<span><i class="fa fa-search"></span>');
+
+				// Reset default
+				// $(this).unbind('click');
+			}
+		});
+
 		// Display comment form upon user request
 		$('#leaveComment').click(function(e){
 			e.preventDefault();

@@ -4,7 +4,7 @@ Theme URI: http://html5reset.org
 Description: A style-free theme to get you started on an HTML5-based WordPress theme of your own.
 Author: Monkey Do! + @ckhicks
 Author URI: http://monkeydo.biz
-Version: 2.0
+Version: 2.1
 */
 
 /* Ok, this is where the fun starts.
@@ -104,15 +104,15 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 /** hidden search box **/
 .sb-search {
 	margin: 0;
-	margin-right: -8px;
+	float: left;
 	height: 50px;
+	overflow: hidden;
 }
 
 .sb-search-input {
-	width: 240px;
+	width: 100%;
+	float: left;
 	height: 50px;
-	margin-top: -1px;
-	margin-right: -244px;
 	background-color: #eee;
 	border: none;
 	padding: 5px 15px;
@@ -138,17 +138,55 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 	outline: none;
 }
 
+.sb-button-go {
+	width: 100%;
+	height: 51px;
+	padding: 0 15px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	font-size: 1.2em;
+	border: none;
+	outline: none;
+}
+
+.search-form i {
+	display: inline-block;
+	float: right;
+	height: 50px;
+	background-color: #eee;
+	color: #ccc;
+	line-height: 48px;
+	font-size: 2em;
+	padding: 0 0 0 15px;
+}
+
 /** highlighted item **/
-.navbar-text.promo-text {
+.promo-text {
 	background: #ff0198;
 	color: #fff;
 	margin: 0;
-	padding: 15px;
+	padding: 14px;
 	font-weight: bold;
 	font-size: 1.3em;
+	position: relative;
+	width: 200px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+}
 
-	/*Hide promo text because it's ugly*/
-	display: none;
+.navbar-text.no-margin {
+	margin: 0;
+}
+
+/** remove padding from side of column **/
+.no-padding-right {
+	padding-right: 0;
+}
+
+.no-padding-left {
+	padding-left: 0;
 }
 
 /** Bring content down so it shows below nav **/
@@ -218,7 +256,7 @@ article h6 {
 article .posts-excerpt {
 	font-family: 'brandon-grotesque';
 	font-size: 1.2em;
-	background: #f5f5f5;
+	background: #fff;
 	padding: 20px;
 }
 
@@ -364,8 +402,9 @@ footer {
 }
 
 .widget ul li a {
-	color: #000;
-	background: #eee;
+	/*color: #000;*/
+	color: #ff0198;
+	/*background: #eee;*/
 	padding: 4px 40px 4px 10px;
 	font-family: 'brandon-grotesque';
 	transition: all .1s ease-in-out;
@@ -376,7 +415,7 @@ footer {
 }
 
 .widget ul li a:hover {
-	padding-right: 90px;
+	/*padding-right: 90px;*/
 }
 
 /** post date **/
@@ -458,4 +497,60 @@ footer {
 	width: auto;
 	border: 2px solid #666;
 	text-align: center;
+}
+
+/** slide navigation down **/
+#navigation {
+	top: 0;
+
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+}
+
+/** hide search upon page load **/
+#topSearch {
+	display: none;
+}
+
+/** slide the main content down with the search bar **/
+#mainContent {
+
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+}
+
+/** style next and previous post links **/
+.next-prev {
+	color: #ff0198;
+	text-align: center;
+}
+
+.next-prev a {
+	color: #ff0198;
+	float: left;
+	display: block;
+}
+
+.next-prev a span {
+	float: left;
+	margin-top: 1em;
+}
+
+.next-prev a i {
+	font-size: 3em;
+	float: left;
+}
+
+.next-prev .lt i {
+	padding-right: 10px;
+}
+
+.next-prev .rt i {
+	padding-left: 10px;
 }
