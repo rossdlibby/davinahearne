@@ -274,11 +274,6 @@ article p {
 	line-height: 1.8em;
 }
 
-/** home ad **/
-.home-ad {
-	padding-top: 51px;
-}
-
 /** home buttons **/
 .home-buttons {
 }
@@ -440,11 +435,6 @@ footer ul li:hover a {
 	border-bottom: 1px solid #eee;
 }
 
-/** hide the home ad **/
-#home_ad {
-	display: none;
-}
-
 /** sidebar **/
 #sidebar {
 	float: left;
@@ -534,6 +524,7 @@ footer ul li:hover a {
 	text-align: center;
 	padding: 12px 0;
 	display: none;
+	z-index: 1028;
 }
 
 .follow-bar a {
@@ -825,4 +816,53 @@ ul.children li {
 .commentlist #respond {
 	width: 100%;
 	float: left;
+}
+
+/** sidebar resources buttons **/
+.sidebar-resources {
+	padding-top: 30px;
+}
+.sidebar-resources h2 {
+	font-family: 'brandon-grotesque';
+	font-size: 1.3em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+.sidebar-resources li {
+	margin-bottom: 10px;
+}
+
+/** header opt-in form **/
+.header-opt-in {
+	padding: 20px 0;
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+.header-opt-in.single {
+	padding-top: 70px;
+}
+
+.header-opt-in input:focus {
+	border-color: #ff0198;
+}
+
+#headerOptIn {
+	display: none;
+}
+
+/** next / previous pages of posts **/
+.next-posts {
+	float: left;
+}
+
+.prev-posts {
+	float: right;
+}
+
+.next-posts a,
+.prev-posts a {
+	color: #ff0198;
 }

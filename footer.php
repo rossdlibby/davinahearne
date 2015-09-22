@@ -30,7 +30,7 @@
 
 				<!-- Footer opt-in -->
 				<div class="footer-opt-in">
-					<form class="form-horizontal" action="" method="post">
+					<form class="form-horizontal" action="http://www.aweber.com/scripts/addlead.pl" method="post">
 						<div class="row">
 							<div class="col-md-4 col-md-offset-2">
 								<input type="text" class="form-control footer-opt-in-text" placeholder="Enter your name" />

@@ -163,7 +163,8 @@
 			<!-- Search box -->
 			<div class="row" id="topSearch">
 				<div class="col-md-8 col-md-offset-2">
-					<form role="search">
+					<?php get_search_form(); ?>
+					<!-- <form role="search">
 						<div class="row">
 							<div class="col-md-10 col-md-offset-1">
 								<div class="search-form">
@@ -183,7 +184,7 @@
 								</div>
 							</div>
 						</div>
-					</form>
+					</form> -->
 
 					<br>
 				</div>
@@ -202,7 +203,7 @@
 					</button>
 
 					<!-- Logo -->
-					<a href="<?php home_url(); ?>" class="navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/images/davinahearne-logo.png" alt="Davina Hearne" width="150" /></a>
+					<a href="<?php echo home_url( '/' ); ?>" class="navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/images/davinahearne-logo.png" alt="Davina Hearne" width="150" /></a>
 				</div>
 
 				<!-- Menu items -->

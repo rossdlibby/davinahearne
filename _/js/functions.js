@@ -19,7 +19,7 @@
 		// your functions go here
 
 		// Hide comment form on page load
-		// $('#commentForm').hide();
+		$('#commentForm').hide();
 
 		// Display search form upon search button click
 		$('#doSearch').click(function(){
@@ -79,12 +79,12 @@
 		});
 
 		// Display the homepage ad after a 5 second delay
-		$('#home_ad').delay(5000).slideToggle();
+		$('#headerOptIn').delay(5000).slideToggle();
 
 		// Hide the homepage ad
 		$('#hide_home_ad').click(function(e) {
 			e.preventDefault();
-			$('#home_ad').slideToggle();
+			$('#headerOptIn').slideToggle();
 		});
 
 	});

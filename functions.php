@@ -142,5 +142,14 @@
 		$avatar_defaults[$myavatar] = "Quote";
 		return $avatar_defaults;
 	}
-	
+
+	// Add post signature
+	add_filter('the_content', 'add_signature', 1);
+	function add_signature($text) {
+		global $post;
+		if(($post->post_type == 'post'))
+			$text .= '<div class="signature"><img src="'.get_bloginfo('template_directory').'/images/sign.png" /></div>';
+		return $text;
+	}
+
 ?>
