@@ -95,6 +95,7 @@
 
 	// Custom Menu
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
+	register_nav_menu( 'footer', __( 'Navigation Menu', 'html5reset' ) );
 
 	// Widgets
 	if ( function_exists('register_sidebar' )) {
@@ -132,5 +133,14 @@
 
 	// Featured images
 	add_theme_support( 'post-thumbnails' );
+
+	// Custom avatar
+	// Add a default avatar to Settings > Discussion
+	add_filter( 'avatar_defaults', 'newgravatar' );
+	function newgravatar ($avatar_defaults) {
+		$myavatar = 'http://i2.wp.com/davinahearne.com/wp-content/themes/davinahearne/images/quote.png';
+		$avatar_defaults[$myavatar] = "Quote";
+		return $avatar_defaults;
+	}
 	
 ?>

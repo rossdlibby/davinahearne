@@ -171,10 +171,10 @@
 										<div class="col-md-1 text-right no-padding-right">
 											<i class="fa fa-search"></i>
 										</div>
-										<div class="col-md-9 text-left no-padding-left">
+										<div class="col-md-9 text-left no-padding-left no-padding-right">
 											<input id="searchInput" class="search-query sb-search-input" placeholder="What are you searching for?" type="search" value="" name="search" id="search">
 										</div>
-										<div class="col-md-2">
+										<div class="col-md-2 no-padding-left">
 											<button type="submit" class="sb-button-go">
 												<span>SEARCH</span>
 											</button>
@@ -211,7 +211,7 @@
 
 					<!-- Highlighted item -->
 					<div class="navbar-text no-margin navbar-right">
-						<p class="promo-text tk-futura-pt">GET FREE STUFF</p>
+						<p class="promo-text tk-futura-pt capitalized"><?php bloginfo('description'); ?></p>
 
 						<div class="sb-search">
 							<button id="doSearch" class="sb-button">

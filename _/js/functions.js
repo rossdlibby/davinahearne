@@ -11,13 +11,15 @@
 // remap jQuery to $
 (function ($) {
 
+	var showFollow = true;
+
 	/* trigger when page is ready */
 	$(document).ready(function (){
 
 		// your functions go here
 
 		// Hide comment form on page load
-		$('#commentForm').hide();
+		// $('#commentForm').hide();
 
 		// Display search form upon search button click
 		$('#doSearch').click(function(){
@@ -61,9 +63,19 @@
 			$('#commentForm').slideToggle();
 		});
 
+		$('#closeFollowBar').click(function(){
+			showFollow = false;
+			$('#follow-bar').hide();
+		});
+
 		// Display follow-bar upon user scroll
 		$(document).scroll(function(){
-			$('#follow-bar').show();
+
+			// Do this only if the user has not already dismissed the
+			// follow-bar during the current browser session
+			if(showFollow){
+				$('#follow-bar').show();
+			}
 		});
 
 		// Display the homepage ad after a 5 second delay

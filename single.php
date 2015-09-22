@@ -42,20 +42,60 @@
 
 						</div>
 					</div>
+
+					<br>
+					<br>
 					
 					<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
 
 					<div class="row next-prev">
 						<div class="col-md-2 lt">
-							<?php previous_post('%', '<i class="fa fa-angle-left"></i> <span>Previous</span>', 'no'); ?>
+							<br>
+							<br>
+							<p><?php previous_post('%', '<i class="fa fa-angle-left"></i> <span>Previous</span>', 'no'); ?></p>
 						</div>
-						<div class="col-md-2 col-md-offset-8 rt">
-							<?php next_post('%', '<span>Next</span> <i class="fa fa-angle-right"></i>', 'no'); ?>
+						<div class="col-md-8 text-center">
+							<p class="capitalized text-black"><strong>Share this post</strong></p>
+							<br>
+							<p>
+								<a href="#" class="share share-fb"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="share share-tw"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="share share-gp"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="share share-en"><i class="fa fa-envelope"></i></a>
+							</p>
+						</div>
+						<div class="col-md-2 rt text-right">
+							<br>
+							<br>
+							<p><?php next_post('%', '<span>Next</span> <i class="fa fa-angle-right"></i>', 'no'); ?></p>
 						</div>
 					</div>
 
-				<div class="post-divider">
-				</div>
+					<br>
+					<br>
+					<br>
+					<br>
+
+					<div class="post-divider"></div>
+
+					<!-- Opt-in form -->
+					<div class="row">
+						<form class="form-horizontal post-opt-in">
+							<div class="col-md-5 text-center capitalized small">
+								<div class="col-md-12">
+									<p class="larger"><strong>Hungry for more?</strong></p>
+									<p><strong>Sign up for my weekly updates... It's free</strong></p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<input type="email" placeholder="Enter your email" class="form-control not-rounded email" />
+							</div>
+							<div class="col-md-3">
+								<input type="submit" value="Hook me up!" class="form-control not-rounded opt-in-btn" />
+							</div>
+						</form>
+					</div>
+					<div class="post-divider"></div>
 					
 				</article>
 
@@ -63,9 +103,12 @@
 				<br>
 
 				<div class="row">
-					<a href="#" class="pink" id="leaveComment">Leave a comment :)</a>
+					<div class="col-md-12">
+						<a href="#" class="pink" id="leaveComment">Leave a comment :)</a>
+					</div>
+				</div>
 
-					<br>
+				<div class="row">
 					
 					<div id="commentForm">
 						<?php comments_template(); ?>
