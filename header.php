@@ -158,34 +158,12 @@
 </script>
 
 	<!-- Nav -->
-	<nav class="navbar navbar-inverse navbar-fixed-top text-right" id="navigation" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top text-right" role="navigation">
 		<div class="container-fluid">
 			<!-- Search box -->
 			<div class="row" id="topSearch">
 				<div class="col-md-10 col-md-offset-1">
 					<?php get_search_form(); ?>
-					<!-- <form role="search">
-						<div class="row">
-							<div class="col-md-10 col-md-offset-1">
-								<div class="search-form">
-									<div class="row">
-										<div class="col-md-1 text-right no-padding-right">
-											<i class="fa fa-search"></i>
-										</div>
-										<div class="col-md-9 text-left no-padding-left no-padding-right">
-											<input id="searchInput" class="search-query sb-search-input" placeholder="What are you searching for?" type="search" value="" name="search" id="search">
-										</div>
-										<div class="col-md-2 no-padding-left">
-											<button type="submit" class="sb-button-go">
-												<span>SEARCH</span>
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form> -->
-
 					<br>
 				</div>
 			</div>
@@ -195,7 +173,7 @@
 				<div class="navbar-header">
 
 					<!-- Responsive button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation" id="navbtn">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -207,8 +185,8 @@
 				</div>
 
 				<!-- Menu items -->
-				<div class="collapse navbar-collapse" id="navigation">
-					<?php wp_nav_menu( array('theme_location' => 'primary', 'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav tk-futura-pt main-menu">%3$s</ul>') ); ?>
+				<div class="navbar-collapse collapse" id="navigation">
+					<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav tk-futura-pt main-menu">%3$s</ul>') ); ?>
 
 					<!-- Highlighted item -->
 					<div class="navbar-text no-margin navbar-right">

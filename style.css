@@ -4,7 +4,7 @@ Theme URI: http://html5reset.org
 Description: A style-free theme to get you started on an HTML5-based WordPress theme of your own.
 Author: Monkey Do! + @ckhicks
 Author URI: http://monkeydo.biz
-Version: 2.3
+Version: 2.5
 */
 
 /* Ok, this is where the fun starts.
@@ -89,6 +89,11 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 .navbar-inverse .navbar-nav li a {
 	padding-top: 25px;
 	padding-bottom: 25px;
+}
+
+.navbar-fixed-top.text-right.collapse {
+	display: block !important;
+	visibility: visible !important;
 }
 
 .main-content {}
@@ -237,7 +242,8 @@ article h1 a {
 	font-weight: bold;
 }
 
-article h2 {
+article h2,
+h2 {
 	font-family: 'kepler-std-subhead';
 	font-size: 2em;
 	padding: 20px 0;
@@ -877,4 +883,24 @@ ul.children li {
 .next-posts a,
 .prev-posts a {
 	color: #ff0198;
+}
+
+/** category image buttons **/
+.category-button {
+	margin: 5px 0;
+}
+
+.category-button a {
+	display: block;
+	width: 100%;
+	padding: 20px 0;
+	background-color: #272727;
+	color: #fff;
+}
+
+/** testimonials **/
+.testimonial_rotator_quote {
+	font-size: 1.4em;
+	font-style: italic;
+	font-weight: 100;
 }

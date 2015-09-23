@@ -6,6 +6,12 @@
  */
  get_header(); ?>
 
+ 	<div class="row">
+ 		<div class="col-md-10 col-md-offset-1 col-sm-12 category-buttons">
+ 			<?php include (TEMPLATEPATH . '/category-buttons.php'); ?>
+	 	</div>
+ 	</div>
+
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 col-sm-12">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -41,6 +47,10 @@
 								<div class="col-md-6">
 									<div class="posts-excerpt">
 										<?php echo wp_trim_words(get_the_content(), 50); ?>
+
+										<br>
+
+										<?php include (TEMPLATEPATH . '/social-icons.php'); ?>
 									</div>
 
 									<div class="text-right post-date">
@@ -64,6 +74,7 @@
 						<div class="post-divider"></div>
 
 			<?php endwhile; ?>
+			
 		</div>
 	</div>
 

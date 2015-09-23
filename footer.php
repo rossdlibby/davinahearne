@@ -5,6 +5,15 @@
 * @since HTML5 Reset 2.0
 */
 ?>
+	<!-- Display random testimonials -->
+	<div class="col-md-6 col-md-offset-3 text-center">
+		<h2>What people are saying</h2>
+		<?php
+			if (function_exists('testimonial_rotator')) {
+				echo testimonial_rotator(array('id' => 7035));
+			}
+		?>
+	</div>
 
 	<!-- End content container -->
 	</div>
@@ -61,7 +70,10 @@
 	<!-- jQuery is called via the WordPress-friendly way via functions.php -->
 
 	<!-- Scripts -->
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<!-- this is where we put our custom functions -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
