@@ -47,6 +47,7 @@
 	<div class="col-md-8 col-md-offset-1">
 
 		<div class="cancel-comment-reply">
+			<br>
 			Leave a Reply <?php cancel_comment_reply_link(); ?>
 		</div>
 
@@ -54,7 +55,7 @@
 			<p><?php _e('You must be','html5reset'); ?> <a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php _e('logged in','html5reset'); ?></a> <?php _e('to post a comment.','html5reset'); ?></p>
 		<?php else : ?>
 
-		<div class="row">
+		<div class="row commentlist main">
 
 			<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="form-horizontal">
 

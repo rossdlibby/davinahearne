@@ -9,33 +9,6 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="row">
-			<div class="header-opt-in single container" id="headerOptIn">
-				<div class="col-md-4 text-center capitalized small">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-6">
-							<p><strong>Get weekly goodies, inspiration + updates straight to your inbox</strong></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-8">
-					<div class="row">
-						<form class="form-horizontal" action="http://www.aweber.com/scripts/addlead.pl" method="post">
-							<div class="col-md-3">
-								<input type="text" placeholder="Enter your name" class="form-control not-rounded no-border border-bottom" />
-							</div>
-							<div class="col-md-3">
-								<input type="email" placeholder="Enter your email" class="form-control not-rounded no-border border-bottom" />
-							</div>
-							<div class="col-md-1">
-								<input type="submit" value="Give it to me" class="btn btn-primary" />
-							</div>
-							<div class="col-md-1 col-md-offset-1">
-								<a href="#" class="btn btn-default no-border" id="hide_home_ad">&#x2716;</a>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
 			<div class="col-md-6 col-md-offset-2">
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
@@ -87,7 +60,7 @@
 							<p>
 								<a href="#" class="share share-fb"><i class="fa fa-facebook"></i></a>
 								<a href="#" class="share share-tw"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="share share-gp"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="share share-pi"><i class="fa fa-pinterest"></i></a>
 								<a href="#" class="share share-en"><i class="fa fa-envelope"></i></a>
 							</p>
 						</div>
@@ -107,17 +80,24 @@
 
 					<!-- Opt-in form -->
 					<div class="row">
-						<form class="form-horizontal post-opt-in">
-							<div class="col-md-5 text-center capitalized small">
+						<form class="form-horizontal post-opt-in" action="http://www.aweber.com/scripts/addlead.pl" method="post">
+							<div class="col-md-5 text-left capitalized small">
 								<div class="col-md-12">
 									<p class="larger"><strong>Hungry for more?</strong></p>
 									<p><strong>Sign up for my weekly updates... It's free</strong></p>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<input type="email" placeholder="Enter your email" class="form-control not-rounded email" />
+							<div class="col-md-5">
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" name="name" placeholder="Enter your name" class="form-control not-rounded email" />
+									</div>
+									<div class="col-md-6">
+										<input type="email" name="email" placeholder="Enter your email" class="form-control not-rounded email" />
+									</div>
+								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-2">
 								<input type="submit" value="Hook me up!" class="form-control not-rounded opt-in-btn" />
 							</div>
 						</form>

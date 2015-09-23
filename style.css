@@ -4,7 +4,7 @@ Theme URI: http://html5reset.org
 Description: A style-free theme to get you started on an HTML5-based WordPress theme of your own.
 Author: Monkey Do! + @ckhicks
 Author URI: http://monkeydo.biz
-Version: 2.1
+Version: 2.2
 */
 
 /* Ok, this is where the fun starts.
@@ -18,8 +18,8 @@ body {font: 13px Helmet, Freesans, sans-serif;}
 /* We like off-black for text. */
 body, select, input, textarea {color: #333;}
 
-a {color: #03f;}
-a:hover {color: #69f;}
+a {color: #ff0198;}
+a:hover {color: #ff0198;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #2e2e2e; color: #fff; text-shadow: none;}
@@ -28,8 +28,8 @@ a:hover {color: #69f;}
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #fcd700;}
 
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+ins {background-color: #fcd700; color: #272727; text-decoration: none;}
+mark {background-color: #fcd700; color: #272727; font-style: italic; font-weight: bold;}
 
 /* Mozilla dosen't style place holders by default */
 input:-moz-placeholder { color:#a9a9a9; }
@@ -86,9 +86,12 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 	color: #fff;
 }
 
-.main-content {
-	margin-top: 50px;	/** to accomodate the fixed top nav **/
+.navbar-inverse .navbar-nav li a {
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
+
+.main-content {}
 
 /** jumbotron opt-in form **/
 .jumbotron-opt-in {
@@ -103,14 +106,14 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 /** black font **/
 .text-black {
-	color: #000;
+	color: #272727;
 }
 
 /** hidden search box **/
 .sb-search {
 	margin: 0;
 	float: left;
-	height: 50px;
+	height: 70px;
 	overflow: hidden;
 }
 
@@ -136,8 +139,8 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 .sb-button {
 	width: 60px;
-	height: 51px;
-	background-color: #000;
+	height: 70px;
+	background-color: #272727;
 	color: #fff;
 	border: none;
 	outline: none;
@@ -147,7 +150,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 	width: 100%;
 	height: 51px;
 	padding: 0 15px;
-	background-color: #000;
+	background-color: #272727;
 	color: #fff;
 	text-align: center;
 	font-size: 1.2em;
@@ -176,7 +179,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 	background: #ff0198;
 	color: #fff;
 	margin: 0;
-	padding: 14px;
+	padding: 24px 14px;
 	font-weight: bold;
 	font-size: 1.3em;
 	position: relative;
@@ -214,7 +217,7 @@ article h1 a {
 	font-family: 'brandon-grotesque';
 	text-transform: uppercase;
 	font-size: 3em;
-	color: #000;
+	color: #272727;
 	transition: all .3s ease-in-out;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
@@ -335,7 +338,7 @@ footer {
 	padding: 15px 0;
 	text-align: center;
 	background: #fff;
-	color: #000;
+	color: #272727;
 	font-size: 1.2em;
 	font-family: 'brandon-grotesque';
 }
@@ -370,13 +373,16 @@ input.footer-opt-in-text:focus {
 
 input.footer-opt-in-button {
 	border: 1px solid #ccc;
-	background-color: #ea5ea5;
+	background-color: #ff0198;
 	color: #fff;
 	text-align: center;
 	width: 100%;
-	font-size: 2em;
+	font-size: 1.4em;
 	font-family: 'brandon-grotesque';
-	background-image: url('images/give-it-to-me-btn.jpg');
+	/*background-image: url('images/give-it-to-me-btn.jpg');*/
+	text-transform: uppercase;
+	font-weight: 100;
+	line-height: 0;
 	background-repeat: no-repeat;
 	background-position: center;
 	padding: 20px 0;
@@ -385,7 +391,7 @@ input.footer-opt-in-button {
 
 footer ul li {
 	display: inline;
-	border-right: 1px solid #000;
+	border-right: 1px solid #272727;
 }
 
 footer ul li:last-child {
@@ -393,7 +399,7 @@ footer ul li:last-child {
 }
 
 footer ul li a {
-	color: #000;
+	color: #272727;
 	padding: 0 10px;
 }
 
@@ -465,7 +471,7 @@ footer ul li:hover a {
 }
 
 .widget ul li a {
-	/*color: #000;*/
+	/*color: #272727;*/
 	color: #ff0198;
 	/*background: #eee;*/
 	padding: 4px 40px 4px 10px;
@@ -484,9 +490,13 @@ footer ul li:hover a {
 /** post date **/
 .post-date {
 	margin: 0 15px;
+	font-size: 1.4em;
+	text-transform: uppercase;
 }
 .post-date a {
 	color: #ff0198;
+	font-weight: bold;
+	font-family: 'futura-pt';
 }
 
 /** highlight **/
@@ -500,14 +510,27 @@ footer ul li:hover a {
 	color: #ff0198;
 }
 
+/** to accomodate the fixed top nav **/
+.nav-spacer {
+	display: block;
+	width: 100%;
+	float: left;
+	height: 70px;
+}
+
 /** contain the header image on the home page **/
 .header-container {
-	margin-top: 50px;	/** to accomodate the fixed top nav **/
 	width: 100%;
 	float: left;
 	background-color: #3a393e;
 	text-align: center;
 	display: block;
+
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
 }
 
 /** follow bar **/
@@ -516,7 +539,7 @@ footer ul li:hover a {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	background-color: #000;
+	background-color: #272727;
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
 	font-size: .75em;
@@ -542,7 +565,7 @@ footer ul li:hover a {
 
 .follow-bar a:hover {
 	background: #fff;
-	color: #000;
+	color: #272727;
 }
 
 .follow-bar .close-share {
@@ -570,7 +593,7 @@ footer ul li:hover a {
 
 /** related posts **/
 .yuzo_wraps a .yuzo__text--title {
-	color: #000;
+	color: #272727;
 	font-family: 'brandon-grotesque';
 }
 
@@ -672,26 +695,6 @@ footer ul li:hover a {
 	border: none;
 }
 
-.share.share-fb {
-	color: #3e5e94;
-}
-
-.share.share-tw {
-	color: #45aee7;
-}
-
-.share.share-gp {
-	color: #cd5e4a;
-}
-
-.share.share-en {
-	color: #c3c3c3;
-}
-
-.next-prev a.share:hover {
-	padding: 8px 20px;
-}
-
 /** in-post opt-in form **/
 .post-opt-in {
 	width: 100%;
@@ -701,12 +704,12 @@ footer ul li:hover a {
 
 .post-opt-in input.email {
 	margin-top: 5px;
-	border: 1px solid #000;
+	border: 1px solid #272727;
 }
 
 .post-opt-in .opt-in-btn {
 	margin-top: 5px;
-	background: #000;
+	background: #272727;
 	color: #fff;
 	outline: none;
 	border: none;
@@ -744,7 +747,7 @@ ul.children {
 }
 
 ul.children li {
-	border-left: 1px solid #000;
+	border-left: 1px solid #272727;
 	padding-left: 25px;
 	margin-top: 0;
 }
@@ -809,6 +812,10 @@ ul.children li {
 	margin-top: 3px;
 }
 
+.commentlist.main .control-label {
+	margin-top: 11px;
+}
+
 .control-label.text-left {
 	text-align: left;
 }
@@ -842,7 +849,7 @@ ul.children li {
 }
 
 .header-opt-in.single {
-	padding-top: 70px;
+	padding-top: 20px;
 }
 
 .header-opt-in input:focus {
@@ -851,6 +858,12 @@ ul.children li {
 
 #headerOptIn {
 	display: none;
+}
+
+/** home opt-in form **/
+.home-opt-in {
+	background-color: #272727;
+	color: #fff;
 }
 
 /** next / previous pages of posts **/

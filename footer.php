@@ -41,7 +41,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
-								<input type="submit" class="form-control footer-opt-in-button" value="" />
+								<input type="submit" class="form-control footer-opt-in-button" value="Give it to me" />
 							</div>
 						</div>
 					</form>

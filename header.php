@@ -226,5 +226,12 @@
 		</div>
 	</nav>
 
+	<div class="nav-spacer"></div>
+
 	<!-- Content container -->
 	<div class="container-fluid" id="mainContent">
+
+		<!-- Opt-in -->
+		<div class="row">
+			<?php include (TEMPLATEPATH . '/header-opt-in.php'); ?>
+		</div>
