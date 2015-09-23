@@ -7,7 +7,7 @@
  get_header(); ?>
 
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2 col-sm-12">
+		<div class="col-md-10 col-md-offset-1 col-sm-12">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -69,7 +69,7 @@
 
 	<div class="row">
 		<br>
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-10 col-md-offset-1">
 			<?php post_navigation(); ?>
 		</div>
 	</div>

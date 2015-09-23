@@ -162,7 +162,7 @@
 		<div class="container-fluid">
 			<!-- Search box -->
 			<div class="row" id="topSearch">
-				<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-10 col-md-offset-1">
 					<?php get_search_form(); ?>
 					<!-- <form role="search">
 						<div class="row">
@@ -190,7 +190,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-1">
 
 				<div class="navbar-header">
 
