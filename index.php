@@ -7,74 +7,84 @@
  get_header(); ?>
 
  	<div class="row">
- 		<div class="col-md-10 col-md-offset-1 col-sm-12 category-buttons">
- 			<?php include (TEMPLATEPATH . '/category-buttons.php'); ?>
-	 	</div>
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+		 		<div class="col-md-10 col-md-offset-1 col-sm-12 category-buttons">
+		 			<?php include (TEMPLATEPATH . '/category-buttons.php'); ?>
+			 	</div>
+			 </div>
+		</div>
  	</div>
 
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1 col-sm-12">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 col-sm-12">
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+								<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-							<div class="row">
-								<div class="col-md-12">
-									<h1 class="entry-title posts-page"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-								</div>
-							</div>
+									<div class="row">
+										<div class="col-md-12">
+											<h1 class="entry-title posts-page"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+										</div>
+									</div>
 
-							<br>
+									<br>
 
-							<div class="row">
+									<div class="row">
 
-								<div class="col-md-6">
+										<div class="col-md-6">
 
-									<a href="<?php the_permalink() ?>" class="individual-post-link">
-										<span class="individual-post">
+											<a href="<?php the_permalink() ?>" class="individual-post-link">
+												<span class="individual-post">
 
-											<?php if (has_post_thumbnail()) { ?>
-											<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+													<?php if (has_post_thumbnail()) { ?>
+													<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-											<div class="partial-img">
-												<img src="<?php echo $image[0] ?>" />
+													<div class="partial-img">
+														<img src="<?php echo $image[0] ?>" />
+													</div>
+													<?php } ?>
+												</span>
+											</a>
+										</div>
+
+										<div class="col-md-6">
+											<div class="posts-excerpt">
+												<?php echo wp_trim_words(get_the_content(), 50); ?>
+
+												<br>
+
 											</div>
-											<?php } ?>
-										</span>
-									</a>
-								</div>
 
-								<div class="col-md-6">
-									<div class="posts-excerpt">
-										<?php echo wp_trim_words(get_the_content(), 50); ?>
+											<div class="col-md-12">
+												<span class="post-date">
+													<h5><span class="pull-left"><?php include (TEMPLATEPATH . '/social-icons.php'); ?></span>
+														<span class="pull-right"><a href="<?php the_permalink() ?>">Read more</a></span></h5>
+												</span>
+											</div>
 
-										<br>
+										</div>
 
-										<?php include (TEMPLATEPATH . '/social-icons.php'); ?>
 									</div>
 
-									<div class="text-right post-date">
-										<h5><a href="<?php the_permalink() ?>">Read more</a></h5>
-									</div>
+								</article>
 
-								</div>
+								<br>
 
-							</div>
+								<br>
 
-						</article>
+								<br>
 
-						<br>
+								<br>
 
-						<br>
+								<div class="post-divider"></div>
 
-						<br>
-
-						<br>
-
-						<div class="post-divider"></div>
-
-			<?php endwhile; ?>
-			
+					<?php endwhile; ?>
+					
+				</div>
+			</div>
 		</div>
 	</div>
 

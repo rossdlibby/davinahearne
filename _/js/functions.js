@@ -56,7 +56,7 @@
 			
 			// Change the link's text depending on comment visibility
 			if($('#commentForm').is(':visible')) {
-				$(this).text('Leave a comment :)');
+				$(this).text('Leave a comment');
 			} else {
 				$(this).text('Hide comments');
 			}

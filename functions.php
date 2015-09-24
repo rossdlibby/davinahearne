@@ -115,8 +115,7 @@
 	// Navigation - update coming from twentythirteen
 	function post_navigation() {
 		echo '<div class="navigation">';
-		echo '	<div class="next-posts">'.get_next_posts_link('&laquo; Older Entries').'</div>';
-		echo '	<div class="prev-posts">'.get_previous_posts_link('Newer Entries &raquo;').'</div>';
+		echo paginate_links(array('prev_text' => '&larr; Previous', 'next_text' => 'Next &rarr;'));
 		echo '</div>';
 	}
 
@@ -141,15 +140,6 @@
 		$myavatar = 'http://i2.wp.com/davinahearne.com/wp-content/themes/davinahearne/images/quote.png';
 		$avatar_defaults[$myavatar] = "Quote";
 		return $avatar_defaults;
-	}
-
-	// Add post signature
-	add_filter('the_content', 'add_signature', 1);
-	function add_signature($text) {
-		global $post;
-		if(($post->post_type == 'post'))
-			$text .= '<div class="signature"><img src="'.get_bloginfo('template_directory').'/images/sign.png" /></div>';
-		return $text;
 	}
 
 ?>

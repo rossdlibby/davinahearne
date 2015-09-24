@@ -21,45 +21,39 @@
 
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-					<br>
-
-					<div class="row">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</div>
-
-					<br>
-
-					<div class="row">
-						<div class="entry-content">
-							
-							<?php the_content(); ?>
-
-							<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
-							
-							<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?>
-
-						</div>
-					</div>
-					
-					<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
-					
-				</article>
-
-				<br>
-				<br>
-
 				<div class="row">
-					<a href="#" class="pink" id="leaveComment">Leave a comment :)</a>
+					<div class="col-md-10 col-md-offset-1">
+						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-					<br>
-					
-					<div id="commentForm">
-						<?php comments_template(); ?>
+							<br>
+
+							<div class="row">
+								<h1 class="entry-title"><?php the_title(); ?></h1>
+							</div>
+
+							<br>
+
+							<div class="row">
+								<div class="entry-content">
+									
+									<?php the_content(); ?>
+
+									<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
+									
+									<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?>
+
+								</div>
+							</div>
+							
+							<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
+							
+						</article>
+
+						<br>
+						<br>
+
 					</div>
 				</div>
-
 			</div>
 		</div>
 

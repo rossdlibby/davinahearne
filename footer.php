@@ -23,17 +23,16 @@
 		Share this page:
 		<a href="#"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
 		<a href="#"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a>
-		<a href="#"><i class="fa fa-google-plus"></i>&nbsp;&nbsp;Google+</a>
 		<a href="#"><i class="fa fa-pinterest"></i>&nbsp;&nbsp;Pinterest</a>
 		<span class="close-share"><button id="closeFollowBar"><i class="fa fa-times"></i></button></span>
 	</div>
 
 	<footer id="footer" class="source-org vcard copyright" role="contentinfo">
 		<div class="row footer-container">
-			<div class="col-md-6 no-padding-right text-right">
+			<div class="col-md-6 no-padding-right text-right col-sm-12">
 				<img src="<?php bloginfo('template_directory') ?>/images/footer-bg-lt.jpg" />
 			</div>
-			<div class="col-md-6 no-padding-left text-left">
+			<div class="col-md-6 no-padding-left text-left col-sm-12">
 				<img src="<?php bloginfo('template_directory') ?>/images/footer-bg-rt-1.jpg" />
 				<img src="<?php bloginfo('template_directory') ?>/images/footer-bg-rt-2.jpg" />
 

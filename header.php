@@ -181,7 +181,7 @@
 					</button>
 
 					<!-- Logo -->
-					<a href="<?php echo home_url( '/' ); ?>" class="navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/images/davinahearne-logo.png" alt="Davina Hearne" width="150" /></a>
+					<a href="<?php echo home_url( '/' ); ?>" class="navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/images/davinahearne-logo.png" alt="Davina Hearne" width="200" /></a>
 				</div>
 
 				<!-- Menu items -->
