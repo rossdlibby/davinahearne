@@ -75,6 +75,19 @@
 							<br>
 							<br>
 
+						</div>
+						
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-8 col-md-offset-1">
+									<?php get_sidebar(); ?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+
 							<div class="post-divider"></div>
 
 							<!-- Opt-in form -->
@@ -121,14 +134,6 @@
 							</div>
 						</div>
 
-					</div>
-
-					<div class="col-md-4">
-						<div class="row">
-							<div class="col-md-8 col-md-offset-1">
-								<?php get_sidebar(); ?>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

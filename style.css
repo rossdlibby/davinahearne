@@ -899,6 +899,10 @@ ul.children li {
 	color: #fff;
 }
 
+.category-buttons {
+	margin-top: 40px;
+}
+
 /** testimonials **/
 .testimonial_rotator_quote {
 	font-size: 1.4em;
@@ -920,4 +924,17 @@ ul.children li {
 .leave-comment {
 	text-transform: uppercase;
 	font-size: 1.2em;
+}
+
+/**
+ * Do not show specific elements if mobile
+ */
+@media screen and (max-device-width: 959px) {
+	.not-mobile {
+		display: none;
+	}
+
+	.header-container {
+		margin-top: 31px;
+	}
 }

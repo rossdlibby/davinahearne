@@ -9,6 +9,9 @@
  	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="row">
+				<div class="col-md-12 text-center">
+		 			<h2>Blog Categories</h2>
+				</div>
 		 		<div class="col-md-10 col-md-offset-1 col-sm-12 category-buttons">
 		 			<?php include (TEMPLATEPATH . '/category-buttons.php'); ?>
 			 	</div>
@@ -16,7 +19,7 @@
 		</div>
  	</div>
 
-	<div class="row">
+	<div class="row category-buttons">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 col-sm-12">

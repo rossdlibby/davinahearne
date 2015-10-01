@@ -2,7 +2,7 @@
 /**
  * Template Name: Home
  */
-get_header(); ?>
+include(TEMPLATEPATH.'/home_header.php'); ?>
 
 <!-- Header image -->
 <div class="row">
