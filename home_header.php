@@ -190,7 +190,7 @@
 
 					<!-- Highlighted item -->
 					<div class="navbar-text no-margin navbar-right">
-						<p class="promo-text tk-futura-pt capitalized"><?php bloginfo('description'); ?></p>
+						<p class="promo-text tk-futura-pt capitalized"><a href="<?php echo home_url( '/free-stuff' ); ?>" class="text-white free-stuff"><?php bloginfo('description'); ?></a></p>
 
 						<div class="sb-search">
 							<button id="doSearch" class="sb-button">

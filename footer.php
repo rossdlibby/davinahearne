@@ -10,7 +10,7 @@
 		<h2>What people are saying</h2>
 		<?php
 			if (function_exists('testimonial_rotator')) {
-				echo testimonial_rotator(array('id' => 7035));
+				echo testimonial_rotator(array('id' => 7371));
 			}
 		?>
 	</div>
@@ -20,10 +20,8 @@
 
 	<!-- Follow bar -->
 	<div class="follow-bar" id="follow-bar">
-		Share this page:
-		<a href="#"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
-		<a href="#"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a>
-		<a href="#"><i class="fa fa-pinterest"></i>&nbsp;&nbsp;Pinterest</a>
+		<span class="share-title">Share this page:</span>
+		<?php naked_social_share_buttons(); ?>
 		<span class="close-share"><button id="closeFollowBar"><i class="fa fa-times"></i></button></span>
 	</div>
 
@@ -52,6 +50,7 @@
 								<input type="submit" class="form-control footer-opt-in-button" value="Give it to me" />
 							</div>
 						</div>
+						<div style="display: none;"><img src="https://forms.aweber.com/form/displays.htm?id=rExsjBwczGzs" alt="" /></div>
 					</form>
 				</div>
 			</div>

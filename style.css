@@ -4,7 +4,7 @@ Theme URI: http://html5reset.org
 Description: A style-free theme to get you started on an HTML5-based WordPress theme of your own.
 Author: Monkey Do! + @ckhicks
 Author URI: http://monkeydo.biz
-Version: 2.8
+Version: 1.2
 */
 
 /* Ok, this is where the fun starts.
@@ -592,6 +592,28 @@ footer ul li:hover a {
 	color: #ff0198;
 }
 
+.follow-bar .naked-social-share {
+	display: inline-block;
+	height: 16px;
+}
+
+.follow-bar .naked-social-share .share-title {
+	display: inline-block;
+}
+
+.follow-bar .naked-social-share a {
+	display: inline-block;
+}
+
+.follow-bar .naked-social-share a span {
+	display: inline;
+	padding-left: 4px;
+}
+
+.follow-bar .naked-social-share .nss-site-count {
+	display: none;
+}
+
 /** post divider **/
 .post-divider {
 	border-bottom: 3px solid #2e2e2e;
@@ -924,6 +946,51 @@ ul.children li {
 .leave-comment {
 	text-transform: uppercase;
 	font-size: 1.2em;
+}
+
+/** blog categories heading **/
+.blog-categories-heading {
+	font-size: 3em !important;
+}
+
+/** naked social share **/
+.naked-social-share ul li {
+	float: left;
+	padding-right: 4px;
+}
+
+.naked-social-share ul li a span {
+	display: none;
+}
+
+.next-prev .naked-social-share ul {
+	width: 100%;
+	text-align: center;
+}
+
+.next-prev .naked-social-share ul li {
+	display: inline-block;
+	float: none;
+}
+
+.next-prev .naked-social-share ul li a {
+	display: inline-block;
+	border-right: 1px solid #ccc;
+	padding: 2px 20px;
+	font-size: 1.6em;
+}
+
+.next-prev .naked-social-share ul li:last-child a {
+	border-right: none;
+}
+
+/** free stuff **/
+.free-stuff {
+	display: block;
+}
+
+.free-stuff:hover {
+	color: #fff;
 }
 
 /**

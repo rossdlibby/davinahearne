@@ -21,6 +21,7 @@
 				<div class="col-md-1 col-md-offset-1">
 					<a href="#" class="btn btn-default no-border" id="hide_home_ad">&#x2716;</a>
 				</div>
+				<div style="display: none;"><img src="https://forms.aweber.com/form/displays.htm?id=TAzMbEyMzGzMHA==" alt="" /></div>
 			</form>
 		</div>
 	</div>

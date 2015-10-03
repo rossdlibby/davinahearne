@@ -51,19 +51,19 @@
 							<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
 
 							<div class="row next-prev">
-								<div class="col-md-2 lt">
+								<div class="col-md-3 lt">
 									<br>
 									<br>
 									<p><?php previous_post('%', '<i class="fa fa-angle-left"></i> <span>Previous</span>', 'no'); ?></p>
 								</div>
-								<div class="col-md-8 text-center">
+								<div class="col-md-6 text-center">
 									<p class="capitalized text-black"><strong>Share this story</strong></p>
 									<br>
 									<p>
 										<?php include (TEMPLATEPATH . '/social-icons.php'); ?>
 									</p>
 								</div>
-								<div class="col-md-2 rt text-right">
+								<div class="col-md-3 rt text-right">
 									<br>
 									<br>
 									<p><?php next_post('%', '<span>Next</span> <i class="fa fa-angle-right"></i>', 'no'); ?></p>
@@ -112,6 +112,7 @@
 									<div class="col-md-2">
 										<input type="submit" value="Hook me up!" class="form-control not-rounded opt-in-btn bg-pink" />
 									</div>
+									<div style="display: none;"><img src="https://forms.aweber.com/form/displays.htm?id=HBwMjGyszIxs" alt="" /></div>
 								</form>
 							</div>
 							<div class="post-divider"></div>
