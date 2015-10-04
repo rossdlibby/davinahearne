@@ -7,10 +7,12 @@
 ?>
 	<!-- Display random testimonials -->
 	<div class="col-md-6 col-md-offset-3 text-center">
-		<h2>What people are saying</h2>
+			<article>
+	 			<h1 class="entry-title posts-page blog-categories-heading">What people are saying</h1>
+	 		</article>
 		<?php
 			if (function_exists('testimonial_rotator')) {
-				echo testimonial_rotator(array('id' => 7371));
+				echo testimonial_rotator(array('id' => 7035));
 			}
 		?>
 	</div>

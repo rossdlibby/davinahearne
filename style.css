@@ -993,6 +993,12 @@ ul.children li {
 	color: #fff;
 }
 
+/** testimonial rotator **/
+.testimonial_rotator_quote {
+	font-size: 1em;
+	font-style: normal;
+}
+
 /**
  * Do not show specific elements if mobile
  */
