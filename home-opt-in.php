@@ -9,6 +9,16 @@
 	<div class="col-md-8">
 		<div class="row">
 			<form class="form-horizontal" action="http://www.aweber.com/scripts/addlead.pl" method="post">
+				<!-- Aweber -->
+				<input type="hidden" name="meta_web_form_id" value="2036213638" />
+				<input type="hidden" name="meta_split_id" value="" />
+				<input type="hidden" name="listname" value="awlist3538324" />
+				<input type="hidden" name="redirect" value="http://davinahearne.com/awesome" id="redirect_7560328a47ea233f7ad5183ce87400c1" />
+				<input type="hidden" name="meta_redirect_onlist" value="http://davinahearne.com/already-subscribed" />
+				<input type="hidden" name="meta_adtracking" value="Davina_Hearne_-_Main" />
+				<input type="hidden" name="meta_message" value="1" />
+				<input type="hidden" name="meta_required" value="name,email" />
+
 				<div class="col-md-3">
 					<input type="text" name="name" placeholder="Enter your name" class="form-control not-rounded no-border border-bottom" />
 				</div>

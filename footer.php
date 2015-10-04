@@ -37,12 +37,22 @@
 				<!-- Footer opt-in -->
 				<div class="footer-opt-in">
 					<form class="form-horizontal" action="http://www.aweber.com/scripts/addlead.pl" method="post">
+						<!-- Aweber -->
+						<input type="hidden" name="meta_web_form_id" value="526188367" />
+						<input type="hidden" name="meta_split_id" value="" />
+						<input type="hidden" name="listname" value="awlist3538324" />
+						<input type="hidden" name="redirect" value="http://davinahearne.com/awesome" id="redirect_1694d65df79b1c129ce1cbb9373015af" />
+						<input type="hidden" name="meta_redirect_onlist" value="http://davinahearne.com/already-subscribed" />
+						<input type="hidden" name="meta_adtracking" value="Davina_Hearne_-_footer" />
+						<input type="hidden" name="meta_message" value="1" />
+						<input type="hidden" name="meta_required" value="name,email" />
+
 						<div class="row">
 							<div class="col-md-4 col-md-offset-2">
-								<input type="text" class="form-control footer-opt-in-text" placeholder="Enter your name" />
+								<input type="text" class="form-control footer-opt-in-text" name="name" placeholder="Enter your name" />
 							</div>
 							<div class="col-md-4">
-								<input type="email" class="form-control footer-opt-in-text" placeholder="Enter your email" />
+								<input type="email" class="form-control footer-opt-in-text" name="email" placeholder="Enter your email" />
 							</div>
 						</div>
 						<div class="row">
