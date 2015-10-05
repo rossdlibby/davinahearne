@@ -6,17 +6,6 @@
  */
  get_header(); ?>
 
-	 <!-- Header image -->
-	<div class="row">
-		<div class="header-container">
-			<?php if (has_post_thumbnail()) { ?>
-				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-
-				<img src="<?php echo $image[0] ?>" />
-			<?php } ?>
-		</div>
-	</div>
-
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="row">
@@ -28,16 +17,22 @@
 							<br>
 
 							<div class="row">
-								<h1 class="entry-title"><?php the_title(); ?></h1>
+								<div class="col-md-3 well">
+								<?php if (has_post_thumbnail()) { ?>
+									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+									<a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0] ?>" /></a>
+								<?php } ?>
+								</div>
+								<div class="col-md-9">
+									<h1 class="entry-title"><a href="<?php the_permalink(); ?>" style="font-size: 1em;"><?php the_title(); ?></a></h1>
+								</div>
 							</div>
 
 							<br>
 
 							<div class="row">
 								<div class="entry-content">
-									
-									<?php the_content(); ?>
-
 									<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
 									
 									<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?>

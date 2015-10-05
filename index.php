@@ -15,7 +15,6 @@
 			 		</article>
 				</div>
 		 		<div class="col-md-10 col-md-offset-1 col-sm-12 category-buttons">
-		 			<?php wp_list_categories(); ?>
 		 			<?php include (TEMPLATEPATH . '/category-buttons.php'); ?>
 			 	</div>
 			 </div>
