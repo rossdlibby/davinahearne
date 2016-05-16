@@ -1011,11 +1011,3 @@ ul.children li {
 		margin-top: 31px;
 	}
 }
-
-/**
- * Highlight search terms
- */
-strong.search-excerpt {
-	background-color: #ff0198;
-	color: #fff;
-}

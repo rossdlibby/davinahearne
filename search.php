@@ -6,66 +6,85 @@
  */
  get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+	<div class="row category-buttons">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 col-sm-12">
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div class="row text-center">
-			<div class="col-md-10 col-md-offset-1">
-				<h2><?php _e('Search Results','html5reset'); ?></h2>
+								<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-				<?php post_navigation(); ?>
-			</div>
-		</div>
-
-		<div class="row">
-
-			<div class="col-md-7 col-md-offset-1">
-
-				<?php while (have_posts()) : the_post(); ?>
-
-					<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-						<div class="row">
-							<div class="col-md-12">
-								<h2><?php the_title(); ?></h2>
-							</div>
-
-							<div class="col-md-4">
-								<?php if (has_post_thumbnail()) { ?>
-									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-
-									<div class="well">
-										<img src="<?php echo $image[0] ?>" />
+									<div class="row">
+										<div class="col-md-12">
+											<h1 class="entry-title posts-page">
+												<?php $title = get_the_title(); $keys= explode(" ",$s); $title = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $title); ?>
+												<a href="<?php the_permalink() ?>"><?php echo $title; ?></a></h1>
+										</div>
 									</div>
-								<?php } ?>
-							</div>
-							<div class="col-md-8">
-								<div class="entry">
 
-									<?php the_excerpt(); ?>
+									<br>
 
-								</div>
-							</div>
-						</div>
+									<div class="row">
 
-					</article>
+										<div class="col-md-6">
 
-				<?php endwhile; ?>
+											<a href="<?php the_permalink() ?>" class="individual-post-link">
+												<span class="individual-post">
 
-			</div>
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-1">
-						<?php get_sidebar(); ?>
-					</div>
+													<?php if (has_post_thumbnail()) { ?>
+													<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+													<div class="partial-img">
+														<img src="<?php echo $image[0] ?>" />
+													</div>
+													<?php } ?>
+												</span>
+											</a>
+										</div>
+
+										<div class="col-md-6">
+											<div class="posts-excerpt">
+												<?php echo wp_trim_words(get_the_content(), 50); ?>
+
+												<br>
+
+											</div>
+
+											<div class="col-md-12">
+												<span class="post-date">
+													<h5><span class="pull-left"><?php include (TEMPLATEPATH . '/social-icons.php'); ?></span>
+														<span class="pull-right"><a href="<?php the_permalink() ?>">Read more</a></span></h5>
+												</span>
+											</div>
+
+										</div>
+
+									</div>
+
+								</article>
+
+								<br>
+
+								<br>
+
+								<br>
+
+								<br>
+
+								<div class="post-divider"></div>
+
+					<?php endwhile; ?>
+					
 				</div>
 			</div>
-
 		</div>
+	</div>
 
-		<div class="row text-center">
-			<div class="col-md-10 col-md-offset-1">
-				<?php post_navigation(); ?>
-			</div>
+	<div class="row">
+		<br>
+		<div class="col-md-10 col-md-offset-1">
+			<?php post_navigation(); ?>
+		</div>
 	</div>
 
 	<?php else : ?>
